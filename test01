@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML5,CSS5,JS">
+    <meta name="description" content="Web前端">
+    <!-- 
+        三秒后自动跳转：
+        <meta http-equiv="refresh" content="3;url=https://www.baidu.com"
+     -->
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <main></main>
+    <footer></footer>
+
+    <nav></nav> <!-- nav表示导航 -->
+    <aside></aside> <!-- aside表示侧边栏 -->
+    <article></article> <!-- article表示独立文章 -->
+    <section></section> <!-- section表示独立区块，别的标签不能表示时用section -->
+    
+    <div></div> <!-- div没有语义，表示区块 -->
+    <span></span> <!-- span没有语义，是行内标签 -->
+    
+
+
+    <hgroup>
+        <h1>hello</h1>
+        <h2>二级标题</h2>
+    </hgroup>
+    <h3>三级标题</h3>
+    <h4>四级标题</h4>
+    <h5>五级标题</h5>
+    <h6>六级标题</h6>
+
+    <!-- p标签表示一个段落 -->
+    <p>111&nbsp;&nbsp;&nbsp;&nbsp;111</p>
+    <p>a&lt;b&gt;c</p>
+    <p>1&copy;</p>
+    <!-- 
+        实体语法：
+        &nbsp;  空格
+        &gt;  大于号
+        &lt;  小于号
+        &copy;  版权符号
+     -->
+
+    <!-- 引用 -->
+     <p>123<em>321</em>123</p>
+     <p>123<strong>321</strong>123</p>
+     <blockquote>
+         明月几时有
+     </blockquote>
+     <p>子曰<q>学而时习之</q></p>
+
+     <!-- br表示换行 -->
+
+</body>
+</html>
+
+
