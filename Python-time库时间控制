@@ -1,0 +1,22 @@
+# time库时间控制
+
+import time
+
+# 时间获取
+print(time.time())
+print(time.ctime()) # 获取易读的时间格式
+print(time.gmtime()) # 获取程序可读时间
+
+t = time.gmtime()
+print(time.strftime("%Y-%m-%d %A %H:%M:%S", t)) # 程序可读时间转化
+
+timeStr = '2021-11-09 Tuesday 13:13:38'
+print(time.strptime(timeStr, "%Y-%m-%d %A %H:%M:%S")) # 逆向
+
+# 程序计时
+start = time.perf_counter()
+def wait():
+    time.sleep(3.3) # 程序停滞
+wait()
+end = time.perf_counter()
+print(end - start)
