@@ -1,0 +1,14 @@
+# random库
+# seed() random()
+import random
+print(random.seed(10)) # 给定种子
+print(random.random())
+print(random.random())
+print(random.randint(10,100)) # 整数
+print(random.randrange(10, 100, 10)) # 以10为步长
+print(random.getrandbits(16)) # 16比特长度
+print(random.uniform(10, 100)) # 随机小数
+print(random.choice([1,2,3])) # 随机选择
+s = [1, 2, 3]
+print(random.shuffle(s)) # 打乱
+print(s)
