@@ -1,0 +1,20 @@
+# 读取文件
+with open("D:\code\PyCharmProjects\pi_digits.txt") as file_object:
+    # cotents = file_object.read()
+    # print(cotents.rstrip())
+    # for line in file_object:
+    #     print(line.rstrip())
+    lines = file_object.readlines()
+pi_string = ''
+for line in lines:
+    pi_string += line.strip()
+print(pi_string)
+print(len(pi_string))
+
+# 写入文件
+filename = 'programming.txt'
+# with open(filename, 'w') as file_object:
+#     file_object.write("1 \n")
+#     file_object.write("2 \n")
+with open(filename, 'a') as file_object:
+    file_object.write("3 \n")
