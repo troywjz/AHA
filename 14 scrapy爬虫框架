@@ -1,0 +1,106 @@
+import scrapy
+
+
+class DemoSpider(scrapy.Spider):
+    name = 'demo'
+    # allowed_domains = ['python123.io']
+    start_urls = ['https://python123.io/ws/demo.html']
+
+    def parse(self, response):
+        fname = response.url.split('/')[-1]
+        with open (fname, 'wb') as f:
+            f.write(response.body)
+        self.log('Saved file %s.' % name)
+        pass
+
+# D:\>cd code
+#
+# D:\code>scrapy startproject scrapydemo
+# New Scrapy project 'scrapydemo', using template directory 'd:\python3.8\lib\site-packages\scrapy\templates\project', created in:
+#     D:\code\scrapydemo
+#
+# You can start your first spider with:
+#     cd scrapydemo
+#     scrapy genspider example example.com
+#
+# D:\code>cd scrapydemo
+#
+# D:\code\scrapydemo>scrapy genspider demo python123.io
+# Created spider 'demo' using template 'basic' in module:
+#   scrapydemo.spiders.demo
+#
+# D:\code\scrapydemo>scrapy crawl demo
+# 2021-12-13 20:17:58 [scrapy.utils.log] INFO: Scrapy 2.5.1 started (bot: scrapydemo)
+# 2021-12-13 20:17:58 [scrapy.utils.log] INFO: Versions: lxml 4.6.3.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:37:02) [MSC v.1924 64 bit (AMD64)], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 36.0.0, Platform Windows-10-10.0.19041-SP0
+# 2021-12-13 20:17:58 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+# 2021-12-13 20:17:58 [scrapy.crawler] INFO: Overridden settings:
+# {'BOT_NAME': 'scrapydemo',
+#  'NEWSPIDER_MODULE': 'scrapydemo.spiders',
+#  'ROBOTSTXT_OBEY': True,
+#  'SPIDER_MODULES': ['scrapydemo.spiders']}
+# 2021-12-13 20:17:58 [scrapy.extensions.telnet] INFO: Telnet Password: e445498f08cc5edb
+# 2021-12-13 20:17:58 [scrapy.middleware] INFO: Enabled extensions:
+# ['scrapy.extensions.corestats.CoreStats',
+#  'scrapy.extensions.telnet.TelnetConsole',
+#  'scrapy.extensions.logstats.LogStats']
+# 2021-12-13 20:17:59 [scrapy.middleware] INFO: Enabled downloader middlewares:
+# ['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+#  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+#  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+#  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+#  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+#  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+#  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+#  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+#  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+#  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+#  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+#  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+# 2021-12-13 20:17:59 [scrapy.middleware] INFO: Enabled spider middlewares:
+# ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+#  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+#  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+#  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+#  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+# 2021-12-13 20:17:59 [scrapy.middleware] INFO: Enabled item pipelines:
+# []
+# 2021-12-13 20:17:59 [scrapy.core.engine] INFO: Spider opened
+# 2021-12-13 20:17:59 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+# 2021-12-13 20:17:59 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+# 2021-12-13 20:17:59 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://python123.io/robots.txt> (referer: None)
+# 2021-12-13 20:17:59 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://python123.io/ws/demo.html> (referer: None)
+# 2021-12-13 20:17:59 [scrapy.core.scraper] ERROR: Spider error processing <GET https://python123.io/ws/demo.html> (referer: None)
+# Traceback (most recent call last):
+#   File "d:\python3.8\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+#     current.result = callback(current.result, *args, **kw)
+#   File "d:\python3.8\lib\site-packages\scrapy\spiders\__init__.py", line 90, in _parse
+#     return self.parse(response, **kwargs)
+#   File "D:\code\scrapydemo\scrapydemo\spiders\demo.py", line 13, in parse
+#     self.log('Saved file %s.' % name)
+# NameError: name 'name' is not defined
+# 2021-12-13 20:17:59 [scrapy.core.engine] INFO: Closing spider (finished)
+# 2021-12-13 20:17:59 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+# {'downloader/request_bytes': 446,
+#  'downloader/request_count': 2,
+#  'downloader/request_method_count/GET': 2,
+#  'downloader/response_bytes': 1441,
+#  'downloader/response_count': 2,
+#  'downloader/response_status_count/200': 1,
+#  'downloader/response_status_count/404': 1,
+#  'elapsed_time_seconds': 0.490122,
+#  'finish_reason': 'finished',
+#  'finish_time': datetime.datetime(2021, 12, 13, 12, 17, 59, 701440),
+#  'log_count/DEBUG': 2,
+#  'log_count/ERROR': 1,
+#  'log_count/INFO': 10,
+#  'response_received_count': 2,
+#  'robotstxt/request_count': 1,
+#  'robotstxt/response_count': 1,
+#  'robotstxt/response_status_count/404': 1,
+#  'scheduler/dequeued': 1,
+#  'scheduler/dequeued/memory': 1,
+#  'scheduler/enqueued': 1,
+#  'scheduler/enqueued/memory': 1,
+#  'spider_exceptions/NameError': 1,
+#  'start_time': datetime.datetime(2021, 12, 13, 12, 17, 59, 211318)}
+# 2021-12-13 20:17:59 [scrapy.core.engine] INFO: Spider closed (finished)
