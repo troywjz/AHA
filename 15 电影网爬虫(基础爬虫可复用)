@@ -1,0 +1,18 @@
+# 1905爬虫测试
+import requests
+import re
+
+url = 'https://www.1905.com/mtalk/'
+pattern = '<figcaption class="list-title"><a href="(.*?)" target="_blank">(.*?)</a></figcaption>'
+header = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'
+}
+response = requests.get(url, headers=header)
+response.encoding = 'utf8'
+# print(response.text)  # 打印源码
+result = re.findall(string=response.text, pattern=pattern, flags=re.S)
+# print(result)  # 以列表形式打印爬取结果
+for i in result:
+    print(i[1], i[0])
+    with open('film1905spider.txt', 'a') as f:
+        f.write(i[1] + i[0] + '\n')
