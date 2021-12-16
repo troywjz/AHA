@@ -1,0 +1,32 @@
+# 爬取1905电影网-影评图片，转码为二进制，并储存
+
+import requests
+import sqlite3
+import json
+import random
+def find():
+    url = 'https://www.1905.com/api/content/'
+    header = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36'
+    }
+    params = {
+        'callback': 'reloadList',
+        'm': 'converged',
+        'a':'info',
+        'type': 'jryp',
+        'year': '2021',
+        'month': '11'
+    }
+    response = requests.get(url, headers=header, params=params)
+    result = response.text
+    result = result.replace('reloadList(', '').replace(')', '')
+    result = json.loads(result)
+    for i in result['info']:
+        print(i['url'], i['title'], i['thumb'])
+        img = requests.get(i['thumb']).content  #图片转换为二进制
+        img_name = random.randint(10000, 99999)
+        with open('img/%s.jpg' % img_name, 'wb') as f:
+            f.write(img)
+        break
+
+find()
