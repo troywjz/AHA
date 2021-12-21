@@ -1,0 +1,39 @@
+# 获取百度营销当前推广数据
+# 部分内容需要f12进行获取
+
+# -*- coding:utf-8 -*-
+
+import requests, json, re, time, datetime
+
+today = str(datetime.datetime.now().date())
+print(today)
+
+url = 'https://fengchao.baidu.com/hairuo/request.ajax'
+
+cookie = {
+    # f12中的cookie
+}
+
+headers = {
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36'
+}
+
+data = {
+    'eqid': ' # f12获取 ',
+    'userid': ' # f12获取 ',
+    'optid': ' # f12获取 ',
+    'token': ' # f12获取 ',
+    'path': 'marsPro/GET/ReportDataService/getReportData',
+    'params': '{"token":" # f12获取 ","reportType":2208157,"startDate":"abc","endDate":"abc","timeUnit":"SUMMARY","userIds":[" # f12获取 "],"columns":["date","userName","impression","click","cost","ctr","cpc","conversion","bridgeConversion"],"sorts":[],"filters":[],"startRow":0,"rowCount":20,"needSum":true,"splitColumn":""}'
+}
+data['params'] = data['params'].replace("abc", today)
+
+response = requests.post(url, headers=headers, cookies=cookie, data=data)
+result = response.text
+result = json.loads(result)
+# print(result)
+impression = result['data']['summary']['impression']
+click = result['data']['summary']['click']
+cost = result['data']['summary']['cost']
+
+print(impression, click, cost)
