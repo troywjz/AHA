@@ -1,8 +1,9 @@
 # 数据可视化
 # 条形图
 import matplotlib.pyplot as plt
+input_value = [1, 2, 3, 4, 5, 6]
 squares = [1, 4, 9, 16, 25, 36]
-plt.plot(squares, linewidth=5)              # 线条
+plt.plot(input_value, squares, linewidth=5) # 线条
 plt.title('Square Numbers', fontsize=24)    # 标题
 plt.xlabel('Value', fontsize=14)            # x周
 plt.ylabel('Square of Value', fontsize=14)  # y轴
