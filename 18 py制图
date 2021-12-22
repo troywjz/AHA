@@ -1,11 +1,31 @@
-# 数据可视化
-# 条形图
+# # 数据可视化
+# # 条形图
+# import matplotlib.pyplot as plt
+#
+# input_value = [1, 2, 3, 4, 5, 6]
+# squares = [1, 4, 9, 16, 25, 36]
+# plt.plot(input_value, squares, linewidth=5)                 # 画线条
+#
+# x_value = [1, 2, 3, 4, 5, 6]
+# y_value = [1, 4, 9, 16, 25, 36]
+# plt.scatter(x_value, y_value, s=100)                        # 画点
+#
+# plt.title('Square Numbers', fontsize=24)                    # 标题
+# plt.xlabel('Value', fontsize=14)                            # x周
+# plt.ylabel('Square of Value', fontsize=14)                  # y轴
+# plt.tick_params(axis='both', which='major', labelsize=14)   # 刻度的样式
+#
+# plt.show()                                                  # 执行
+
 import matplotlib.pyplot as plt
-input_value = [1, 2, 3, 4, 5, 6]
-squares = [1, 4, 9, 16, 25, 36]
-plt.plot(input_value, squares, linewidth=5) # 线条
-plt.title('Square Numbers', fontsize=24)    # 标题
-plt.xlabel('Value', fontsize=14)            # x周
-plt.ylabel('Square of Value', fontsize=14)  # y轴
-plt.tick_params(axis='both', labelsize=14)  # 刻度的样式
+x_values = list(range(1, 1001))
+y_values = [x**2 for x in x_values]
+plt.scatter(x_values, y_values, c=y_values,cmap=plt.cm.Blues, edgecolors='none', s=10)
+# 画点，x轴y轴，颜色以y映射，y值小的颜色浅，y值大的颜色深，点边缘无颜色，宽度10
+plt.title('Square Numbers', fontsize=24)                    # 标题
+plt.xlabel('Value', fontsize=14)                            # x周
+plt.ylabel('Square of Value', fontsize=14)                  # y轴
+plt.tick_params(axis='both', which='major', labelsize=14)   # 刻度的样式
+plt.axis([0, 1100, 0, 1100000])
 plt.show()
+# plt.savefig('square_plot.png', bbox_inches='tight')         # 保存图片，去掉空白区域
