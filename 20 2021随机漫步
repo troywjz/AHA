@@ -1,0 +1,15 @@
+# -*- coding:utf-8 -*-
+
+# 2021随机漫步
+
+import random
+import matplotlib.pyplot as plt
+
+for i in range(10):
+    x = random.randint(1, 53)
+    y = random.randint(1, 7)
+    plt.scatter(x, y)
+    print(x, y)
+plt.title("2021 Random Walk", fontsize=16)
+
+plt.show()
