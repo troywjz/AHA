@@ -10,6 +10,18 @@ for i in range(10):
     y = random.randint(1, 7)
     plt.scatter(x, y)
     print(x, y)
-plt.title("2021 Random Walk", fontsize=16)
+# plt.title("2021 Random Walk", fontsize=16)
+plt.axis([0, 53, 0, 7])
+
+# 隐藏边框
+ax1 = plt.gca()
+ax1.spines['top'].set_visible(False)
+ax1.spines['right'].set_visible(False)
+ax1.spines['bottom'].set_visible(False)
+ax1.spines['left'].set_visible(False)
+
+# 隐藏坐标
+plt.xticks([])
+plt.yticks([])
 
 plt.show()
