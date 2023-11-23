@@ -1,11 +1,80 @@
-<mxfile host="app.diagrams.net" modified="2023-11-23T07:46:06.087Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="_6neol_8G5jhqHL9Cg34" version="21.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-23T08:02:17.624Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="pn8OfjZscPTiS5Znsnyv" version="21.6.8" type="github">
   <diagram name="第 1 页" id="HLCkWzVpEHCjr5P5NUDH">
-    <mxGraphModel dx="1050" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="840" dy="427" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="TTZNESWrUmOEkP3UjsEZ-1" value="“文件传输助手”" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-1" target="TTZNESWrUmOEkP3UjsEZ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-1" value="“文件传输助手”" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="360" y="150" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-5" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-2" target="TTZNESWrUmOEkP3UjsEZ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-2" value="是否有未读消息" style="whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;shape=mxgraph.flowchart.decision;" vertex="1" parent="1">
+          <mxGeometry x="350" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-4" target="TTZNESWrUmOEkP3UjsEZ-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-4" value="跳到未读" style="whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-8" target="TTZNESWrUmOEkP3UjsEZ-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-8" value="识别最近10条消息" style="whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-14" target="TTZNESWrUmOEkP3UjsEZ-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-14" value="找到我发送的最后一条消息，以下的消息" style="whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-16" target="TTZNESWrUmOEkP3UjsEZ-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-16" value="装入未处理消息列表" style="whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-18" target="TTZNESWrUmOEkP3UjsEZ-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-18" value="从列表中依次取出未处理消息" style="whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="990" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-23" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-20" target="TTZNESWrUmOEkP3UjsEZ-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-25" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-20" target="TTZNESWrUmOEkP3UjsEZ-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-20" value="是否在is中有对应" style="whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;shape=mxgraph.flowchart.decision;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-22" value="匹配回复" style="whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-27" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-24" target="TTZNESWrUmOEkP3UjsEZ-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-29" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-24" target="TTZNESWrUmOEkP3UjsEZ-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-24" value="是否在include中有对应" style="whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;shape=mxgraph.flowchart.decision;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-26" value="匹配回复" style="whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="550" y="1270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TTZNESWrUmOEkP3UjsEZ-28" target="TTZNESWrUmOEkP3UjsEZ-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TTZNESWrUmOEkP3UjsEZ-28" value="" style="whiteSpace=wrap;html=1;fontSize=16;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="750" y="1130" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
